@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Find the Product</h1>
+<font size="4">
+<pre>
+    const Find_Prod = (array, N) => 
+    {
+    let product = 1;
+    for(let i=0; i< array.length; i++){
+        product *=array[i];
+    }
+    return product;
+    let pro = array.reduce((a,b)=>a=a*b,1)
+    return pro;
+    };
+</pre>
+</font>
+
+<h1>Find the Sum.</h1>
+<font size="4">
+    <pre>
+        const Find_Sum = (array, N)=>
+        {
+            let sum = 0;
+            for(let i=0; i< array.length; i++){
+                Sum+=array[i];
+            }
+            return sum;
+        }
+    </pre>
+</font>
+<h1>Count Occurrences</h1>
+<font size="4">
+    <pre>
+        const findCount = (N, K, Arr) => 
+        {
+        let count=0;
+        for(let i=0; i< N; i++){
+            if( Arr[i] === K){
+            count++;
+            }
+        }
+        return count;
+        };
+    </pre>
+</font>
+<h1>Even Odd</h1>
+<font size="4">
+    <pre>
+        const findEvenOdd = (N, Arr) => 
+        {
+            let odd=0;
+            let even=0;
+            let B=[2];
+            for(let i=0; i< N; i++){
+                if(Arr[i]%2===0){
+                     even+=Arr[i];
+                 }
+                else{
+                    odd+=Arr[i];
+                }
+            }
+            B[0]=even;
+            B[1]=odd;
+            return B;
+        };
+    </pre>
+</font>
+<h1>Find whether the number is present or not</h1>
+<font size="4">
+    <pre>
+        const Find_Num = (array,N,M) =>
+        {
+            for(let i=0; i< N; i++){
+                if(array[i]===M){
+                    return "YES"
+                }
+            }
+            return "NO"
+        };
+    </pre>
+</font>
+<h1>Higher Age</h1>
+<font size="4">
+    <pre>
+        const highAge = (N,Arr)=>{
+            let B=[];
+            for(let i=0; i< N; i++){
+                if(Arr[i]>=18){
+                    B.push(Arr[i]);
+                }
+            }
+            returm B;
+        };
+    </pre>
+</font>
+<h1>Increment the Array Elements</h1>
+<font size="4">
+    <pre>
+        const Inc_Arr = (array,N) =>
+        {
+            array.forEach(function(increment){
+                console.log(increment+i)
+            })
+        };
+    </pre>
+</font>
+<h1>Pass or Fail</h1>
+<font size="4">
+    <pre>
+        const isAllPass = (N, Arr)=>
+        {
+            for(let i=0; i< N; i++){
+                if(Arr[i] < 32){
+                    return "NO"
+                }
+            }
+            return "YES"
+        };
+    </pre>
+</font>
+<h1>Unique Color Shirt</h1>
+<font size="4">
+    <pre>
+        function Unique_Shirts (arr,N){
+            let freq=[];
+            for(let i=0; i< 1000; i++){
+                freq[i]="0;"
+            }
+            for(let i=0; i< N; i++){
+                freq[arr[i]]++;
+            }
+            let ans=0;
+            for(let i=0; i<= 1000; i++){
+                if(freq[i]===1){
+                    ans++;
+                }
+            }
+            return ans;
+        };
+    </pre>
+</font>
+<h1>Min and Max</h1>
+<font size="4">
+    <pre>
+        function arrayMin(arr){
+            let min=arr[0];
+            for(let i=0;i< arr.length; i++){
+                if(arr[i+1]< min){
+                    min = arr[i+1];
+                }
+            }
+            return min;
+        }
+
+        function arrayMax(arr){
+            let max=arr[0];
+            for(let i=0; arr.length > i; i++>){
+                if(arr[i+1]> max){
+                    max=arr[i+1];
+                }
+            }
+            return max;
+        }
+    </pre>
+</font>
+<h1>Birthday Game</h1>
+<font size="4">
+    <pre>
+        function Birthday_Game(arr,D,M){
+            count=0
+            for(let i=0; i< arr.length-M+1; i++){
+                let sum=0
+                for(let J=i; J< M+i; j++){
+                    sum+=arr[j]
+                }
+                if(sum ===D){
+                    count++
+                }
+            }
+            return count
+        }
+    </pre>
+</font>
+    
+
+
+</body>
+</html>
